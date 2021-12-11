@@ -49,8 +49,8 @@ According to your transmitter device, change description on sensor_info.json in 
 }
 ```
 "0028e8ce" is ID (hex) of transmitter device, and you need to specify EEP on "eep".
-"name", "type", "place" and "comment" shpuld be specified according to your system.
-You have to mark all your transmitter device's infomation on this JSON file, 
+"name", "type", "place" and "comment" according to your system.
+You have to mark all your transmitter device's infomation on sensor_info.json, 
 because data from the device which is not listed on this file is not handled on this scripts.<br>
 
 Corresponding EEPs are following.<br>
