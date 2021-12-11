@@ -1,47 +1,41 @@
-# 1. General
-***
-EnOcean is battery-less wireless communication standard, which enables to build maintainance-free data aquisition system.
-This repository provides python scripts which enable you to receive and view EnOcean telegrams on LinuxOS.
+## 1. General
+EnOcean is battery-less wireless communication standard, which enables to build maintainance-free data aquisition system.<br>
+This repository provides python scripts which enable you to receive and view EnOcean telegrams on LinuxOS.<br>
 
-# Target frequencies
-***
-as you know, EnOcean has 4 radip frequency valiant, 868MHz, 902MHz(U), 928MHz(J), 2.4GHz(Z).
-for now (11th Dec 2021), this repository forcus on following valiant.
+## 2. Target frequencies
+As you know, EnOcean has 4 radip frequency valiant, 868MHz, 902MHz(U), 928MHz(J), 2.4GHz(Z).<br>
+For now (11th Dec 2021), this repository forcus on following valiant.<br>
 - 928MHz(J)
 
-# 2. System requirements
-***
-OS: Ubuntu, Raspbian
-Python: 3.7 (or latter)
-EnOcean telegram receiver: USB400J *928MHz(J) product series
+## 3. System requirements
+- OS: Ubuntu, Raspbian
+- Python: 3.7 (or latter)
+- EnOcean telegram receiver: USB400J *928MHz(J) product series
 
-# 3. Setting
-***
-firstlly, clone this repositoty into your system, and move to root directory of repository.
-to fix USB device name, coppy rules file to "/etc/udev/rules.d/".
+## 4. Setting
+Firstlly, clone this repositoty into your system, and move to root directory of repository.<br>
+to fix USB device name, coppy rules file to "/etc/udev/rules.d/".<br>
 ```
 $ sudo cp ./rules/80-enocean.rules /etc/udev/rules.d/
 ```
-note: if your system already has rules file which prefix is 80, change prefix to not-used number, for ex.,
+Note: if your system already has rules file which prefix is 80, change prefix to not-used number, for ex.,<br>
 ```
 $ sudo cp ./rules/80-enocean.rules /etc/udev/rules.d/79-enocean.rules
 ```
-insert USB40J into USB port, then check recognition on your system with following command.
+Insert USB40J into USB port, then check recognition on your system with following command.<br>
 ```
 $ ls /dev/ | grep ttyUSB
 ```
-if you find "ttyUSBenocean", it works good.
+If you find "ttyUSBenocean", it works.<br>
 
 
-Next, install requirements
+Next, install requirements.<br>
 ```
 $ sudo pip3 install -r requirements.txt
 ```
 
-# 4. example application: show 928MHz(J) telegram data
-***
-According to your transmitter device, change description on sensor_info.json in sensor_info directory.
-here's example.
+## 5. example application: show 928MHz(J) telegram data
+According to your transmitter device, change description on sensor_info.json in sensor_info directory, here's example.<br>
 ```
 {
     "0029799d": {
@@ -56,22 +50,22 @@ here's example.
 ```
 "0028e8ce" is ID (hex) of transmitter device, and you need to specify EEP on "eep".
 "name", "type", "place" and "comment" shpuld be specified according to your system.
-you have to mark all your transmitter device's infomation on this JSON file.
-data from the device which is not listed on this file, can't treat this scripts.
+You have to mark all your transmitter device's infomation on this JSON file, 
+because data from the device which is not listed on this file is not handled on this scripts.<br>
 
-corresponding EEPs are following.
+Corresponding EEPs are following.<br>
 - F6_02_04 (rocker switch)
 - D5_00_01 (magnet contact sensor)
 - A5_02_05 (temperature sensor)
 - A5_04_01 (tempearture and humidity sensor)
 
-you can add another EEP, it is required to add corresponding method and function pointer to enocean_equipment_profiles.py 
+You can add another EEP, it is required to add corresponding method and function pointer to enocean_equipment_profiles.py.<br>
 
-start app example with
+Start app example with<br>
 ```
 $ sudo python3 app_example_receive_data_J.py
 ```
-and transmit telegram (e.g. press switch), then you can see telegram data on console like this. 
+and transmit telegram (e.g. press switch), then you can see telegram data on console like this.<br>
 ```
 # rocker switch
 {
@@ -115,19 +109,17 @@ and transmit telegram (e.g. press switch), then you can see telegram data on con
     'sub_tel_num': 1
 }
 ```
-in this app, data (928MHz telegram) handling instance is generated from EnOcean_J class,
-get_packet() method parforms packet analysis and returns extructed data from packet like above.
+In this app, data (928MHz telegram) handling instance is generated from EnOcean_J class.<br>
+The get_packet() method parforms packet analysis and returns extructed data from packet like above.<br>
 
 
-# 5. exsample application: show ESP3 packet
-***
-you can view ESP3 packet from receiver device with following steps.
-Start app example.
+## 6. exsample application: show ESP3 packet
+You can view ESP3 packet from receiver device with following steps.<br>
+Start app example.<br>
 ```
 $ sudo python3 app_example_view_ESP3_packet_J.py
 ```
-and transmit telegram (e.g. press switch), then you can see telegram data on console like this.
-note: all received telegram  
+And then transmit telegram (e.g. press switch), you can see telegram data on console like this.<br>
 ```
 # rocker switch
 {'data': ['0x20', '0x00', '0x29', '0x79', '0x9d', '0x88', '0xb7'],
@@ -153,10 +145,10 @@ note: all received telegram
  'opdata': ['0x01', '0x3c'],
  'packet_type': '0x0a'}
 ```
+note: despite of sensor information on sensor_info.json, all received telegrams are shown.<br>
 
-# 6. License
-***
-Copyright (c) 2021 SAri
+## 7. License
+Copyright (c) 2021 SAri<br>
 
 
 
