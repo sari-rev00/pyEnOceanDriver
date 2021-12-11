@@ -109,8 +109,10 @@ and transmit telegram (e.g. press switch), then you can see telegram data on con
     'sub_tel_num': 1
 }
 ```
-In this app, data (928MHz telegram) handling instance is generated from EnOcean_J class.<br>
-The get_packet() method parforms packet analysis and returns extructed data from packet like above.<br>
+In this app, data (928MHz telegram) handling instance is generated from EnOcean_J class 
+described in utils/enocean_serial_protocol.py.<br>
+The get_packet() attribute of EnOcean_J class parforms packet analysis 
+and returns extructed data from packet like above.<br>
 
 
 ## 6. Example application: show ESP3 packet
