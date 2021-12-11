@@ -14,7 +14,7 @@ For now (11th Dec 2021), this repository forcus on following valiant.<br>
 
 ## 4. Setting
 Firstlly, clone this repositoty into your system, and move to root directory of repository.<br>
-to fix USB device name, coppy rules file to "/etc/udev/rules.d/".<br>
+To fix USB device name, coppy rules file to "/etc/udev/rules.d/".<br>
 ```
 $ sudo cp ./rules/80-enocean.rules /etc/udev/rules.d/
 ```
