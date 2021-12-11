@@ -34,7 +34,7 @@ Next, install requirements.<br>
 $ sudo pip3 install -r requirements.txt
 ```
 
-## 5. example application: show 928MHz(J) telegram data
+## 5. Example application: show 928MHz(J) telegram data
 According to your transmitter device, change description on sensor_info.json in sensor_info directory, here's example.<br>
 ```
 {
@@ -113,7 +113,7 @@ In this app, data (928MHz telegram) handling instance is generated from EnOcean_
 The get_packet() method parforms packet analysis and returns extructed data from packet like above.<br>
 
 
-## 6. exsample application: show ESP3 packet
+## 6. Example application: show ESP3 packet
 You can view ESP3 packet from receiver device with following steps.<br>
 Start app example.<br>
 ```
@@ -145,7 +145,7 @@ And then transmit telegram (e.g. press switch), you can see telegram data on con
  'opdata': ['0x01', '0x3c'],
  'packet_type': '0x0a'}
 ```
-note: despite of sensor information on sensor_info.json, all received telegrams are shown.<br>
+Note: despite of sensor information on sensor_info.json, all received telegrams are shown.<br>
 
 ## 7. License
 Copyright (c) 2021 SAri<br>
