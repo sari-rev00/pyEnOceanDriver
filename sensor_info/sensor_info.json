@@ -1,44 +1,44 @@
 {
-	"0028e8ce": {
-		"name": "switch_1",
-		"type": "rocker_switch",
-		"place": "else",
-		"eep": "F6-02-04",
-		"comment": ""
-	},
-	"05178d7d": {
-		"name": "temp_test",
-		"type": "temperature",
-		"place": "else",
-		"eep": "A5-02-05",
-		"comment": ""
-	},
-	"04004049": {
-		"name": "door_state_refrigerator",
-		"type": "magnet_contact",
-		"place": "else",
-		"eep": "D5-00-01",
-		"comment": ""
-	},
-	"0400f66b": {
-		"name": "temp_humid_01",
-		"type": "temperature_and_humidity_sensor",
-		"place": "1F_living_room",
-		"eep": "A5-04-01",
-		"comment": ""
-	},
-	"0400f687": {
-		"name": "temp_humid_02",
-		"type": "temperature_and_humidity_sensor",
-		"place": "2F_north_east_room",
-		"eep": "A5-04-01",
-		"comment": ""
-	},
-	"04017d36": {
-		"name": "temp_humid_03",
-		"type": "temperature_and_humidity_sensor",
-		"place": "outside",
-		"eep": "A5-04-01",
-		"comment": ""
-	}
+    "0029799d": {
+        "name": "switch_1",
+        "type": "rocker_switch",
+        "place": "room_1",
+        "eep": "F6-02-04",
+        "comment": "control flor light"
+    },
+    "05178d7d": {
+        "name": "temp_test",
+        "type": "temperature",
+        "place": "else",
+        "eep": "A5-02-05",
+        "comment": ""
+    },
+    "04004049": {
+        "name": "door_state_refrigerator",
+        "type": "magnet_contact",
+        "place": "else",
+        "eep": "D5-00-01",
+        "comment": ""
+    },
+    "0400f66b": {
+        "name": "temp_humid_01",
+        "type": "temperature_and_humidity_sensor",
+        "place": "1F_living_room",
+        "eep": "A5-04-01",
+        "comment": ""
+    },
+    "0400f687": {
+        "name": "temp_humid_02",
+        "type": "temperature_and_humidity_sensor",
+        "place": "2F_north_east_room",
+        "eep": "A5-04-01",
+        "comment": ""
+    },
+    "04017d36": {
+        "name": "temp_humid_03",
+        "type": "temperature_and_humidity_sensor",
+        "place": "outside",
+        "eep": "A5-04-01",
+        "comment": ""
+    }
 }
