@@ -4,7 +4,7 @@ from datetime import datetime
 from utils.enocean_serial_protocol import ESP3
 from utils.enocean_radio_protocol import ERP2
 from utils.enocean_equipment_profiles import eep_get_data
-from config.config import J
+from config.config import J, U
 
 
 class EnOcean_J:
@@ -72,3 +72,18 @@ class EnOcean_J:
         else:
             ret = None
         return ret
+
+
+class EnOcean_U(EnOcean_J):
+    def __init__(
+            self, 
+            sensor_info_path=U.SENSOR_INFO_PATH, 
+            dev=U.SERIAL_DEVICE, 
+            b_rate=U.BAUDRATE, 
+            timeout=U.TIMEOUT):
+        super().__init__(
+            sensor_info_path=sensor_info_path, 
+            dev=dev, 
+            b_rate=b_rate, 
+            timeout=timeout)
+        return None

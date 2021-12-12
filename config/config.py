@@ -6,4 +6,9 @@ class Common():
 
 class J(Common):
     BAUDRATE = 57600
-    SENSOR_INFO_PATH = "./sensor_info/sensor_info.json"
+    SENSOR_INFO_PATH = "./sensor_info/sensor_info_J.json"
+
+
+class U(Common):
+    BAUDRATE = 57600
+    SENSOR_INFO_PATH = "./sensor_info/sensor_info_U.json"

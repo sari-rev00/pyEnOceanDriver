@@ -1,11 +1,11 @@
 import os
 import time
 from pprint import pprint
-from utils.enocean_driver import EnOcean_J
+from utils.enocean_driver import EnOcean_U
 
 
 def view_packet_loop():
-    eo = EnOcean_J()
+    eo = EnOcean_U()
     while True:
         try:
             packet = eo.get_packet()

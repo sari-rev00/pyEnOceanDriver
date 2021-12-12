@@ -1,0 +1,9 @@
+{
+    "0029799d": {
+        "name": "switch_1",
+        "type": "rocker_switch",
+        "place": "room_1",
+        "eep": "F6-02-04",
+        "comment": "control flor light"
+    }
+}
