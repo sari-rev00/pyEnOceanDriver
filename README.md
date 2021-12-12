@@ -2,7 +2,7 @@
 EnOcean is battery-less wireless communication standard, which enables to build maintainance-free data aquisition system.<br>
 This repository provides python scripts which enable you to receive and view EnOcean telegrams on LinuxOS.<br>
 
-Fro more infomation:<br>
+For more infomation:<br>
 - [EnOcean GmbH](https://www.enocean.com/)
 - [EnOcean Alliance](https://www.enocean-alliance.org/)
 
@@ -16,7 +16,7 @@ For now (11th Dec 2021), this repository forcus on following frequencies.<br>
 | 928MHz | Japan | ERP2, ESP3 |
 
 ## How it works
-EnOcan_x class (x represent frequency type) in utils/enocean_driver.py provides following functionalities.<br>
+EnOcan_x class (x represent frequency type) in utils/enocean_driver.py provides following functions.<br>
 1. Analyze serial communication packets from EnOcean telegram receiver, which is connected via USB port.<br>
 2. Extruct radio properties such as RSSI(radio signal strength intensity) and number of received sub-telegrams.<br>
 3. Calucurate data according to EnOcan Equipment Profiles(EEP)<br>
